@@ -1,0 +1,8 @@
+<h1>Blogs</h1>
+<ul>
+{% for x in object_list %}
+  <li><a href="{% url 'details' x.pk %}">{{ x.title }}</a> - {{x.author.first_name}} 
+    {{x.author.last_name}}<br>
+   {{x.body}} </li>
+{% endfor %}
+</ul>
